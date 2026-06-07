@@ -132,14 +132,18 @@
    */
   const typed = select('.typed')
   if (typed) {
-    let typed_strings = typed.getAttribute('data-typed-items')
-    typed_strings = typed_strings.split('|').map(s => s.trim())
+    const typed_strings = [
+      'Software Engineer (Data & ML)',
+      'Manchester United FC Fan',
+      'Swimmer'
+    ]
     new Typed('.typed', {
       strings: typed_strings,
       loop: true,
       typeSpeed: 100,
       backSpeed: 50,
-      backDelay: 2000
+      backDelay: 2000,
+      contentType: null
     });
   }
 
