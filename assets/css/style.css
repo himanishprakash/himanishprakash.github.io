@@ -269,7 +269,10 @@ h6 {
   position: relative;
   z-index: 2;
   min-width: 300px;
+  width: 100%;
+  box-sizing: border-box;
   padding-left: 50%;
+  padding-right: 40px;
 }
 
 #hero h1 {
@@ -285,6 +288,9 @@ h6 {
   margin-bottom: 50px;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
+  white-space: normal;
+  line-height: 1.4;
+  max-width: 100%;
 }
 
 #hero p span {
@@ -292,6 +298,8 @@ h6 {
   padding-bottom: 4px;
   letter-spacing: 1px;
   border-bottom: 3px solid #149ddd;
+  display: inline;
+  word-break: normal;
 }
 
 @media (min-width: 1024px) {
@@ -301,10 +309,21 @@ h6 {
 }
 
 @media (max-width: 768px) {
+  #hero .hero-container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
   #hero h1 {
     font-size: 28px;
     line-height: 36px;
-    margin-left: 70px;
+    margin-left: 0;
+  }
+
+  #hero p {
+    font-size: 18px;
+    line-height: 1.45;
+    margin-left: 0;
   }
 
 #hero h2 {
@@ -357,6 +376,25 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+#about {
+  padding: 35px 0 25px;
+}
+
+#about .section-title {
+  padding-bottom: 0;
+}
+
+#about .section-title h2 {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+}
+
+#about p {
+  margin: 0;
+  max-width: 820px;
+  line-height: 1.65;
+}
+
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
@@ -443,6 +481,35 @@ section {
 /*--------------------------------------------------------------
 # Akills
 --------------------------------------------------------------*/
+.skills-category {
+  font-size: 18px;
+  font-weight: 700;
+  color: #173b6c;
+  margin: 0 0 12px 0;
+}
+
+.skills-category:not(:first-child) {
+  margin-top: 24px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.skill-tags span {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #173b6c;
+  background: #fff;
+  border: 1px solid #dce8f8;
+  border-radius: 20px;
+}
+
 .skills .progress {
   height: 60px;
   display: block;
