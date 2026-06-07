@@ -134,7 +134,7 @@
   if (typed) {
     const typed_strings = [
       'Software Engineer (Data & ML)',
-      'Manchester United FC Fan',
+      'Man United fan',
       'Swimmer'
     ]
     new Typed('.typed', {
